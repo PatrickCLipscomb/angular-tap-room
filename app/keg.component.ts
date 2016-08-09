@@ -18,15 +18,7 @@ import { Keg } from './keg.model';
 })
 export class KegComponent {
   public keg: Keg;
-  public pricy: boolean;
   drinkPint(keg: Keg) {
     keg.pints --;
   }
-  // pricy(keg: Keg) {
-  //   if (keg.price > 5) {
-  //     return true
-  //   } else {
-  //     return false
-  //   }
-  // }
 }
