@@ -7,10 +7,13 @@ import { Keg } from './keg.model';
   template: `
     <div>
       <label>{{keg.brand}}, \${{keg.price}}.00, Alcohol Content: {{keg.alcContent}}, Number of Pints: {{keg.pints}}</label>
-      <button type="button">Have a Pint</button>
+      <button (click)="drinkPint(keg)">Drink Pint</button>
     </div>
   `
 })
 export class KegComponent {
   public keg: Keg;
+  drinkPint(keg: Keg) {
+    keg.pints --;
+  }
 }
